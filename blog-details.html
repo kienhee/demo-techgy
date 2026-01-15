@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Chi tiết bài viết - Techgy Blog Công Nghệ</title>
+  <meta name="description" content="Chi tiết bài viết công nghệ trên Techgy: xu hướng, best practice và kinh nghiệm thực tế trong phát triển web hiện đại.">
+  <meta name="keywords" content="techgy, chi tiết bài viết, web hiện đại, best practices, xu hướng 2025">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Blogy
+  * Template URL: https://bootstrapmade.com/blogy-bootstrap-blog-template/
+  * Updated: Feb 22 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="blog-details-page">
+
+  <header id="header" class="header position-relative">
+    <div class="container-fluid container-xl position-relative">
+
+      <div class="top-row d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-end">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt="Techgy Logo"> -->
+          <h1 class="sitename">Techgy</h1><span>.</span>
+        </a>
+
+        <div class="d-flex align-items-center">
+          <div class="social-links">
+            <a href="#" class="facebook" aria-label="Facebook Techgy"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="twitter" aria-label="Twitter Techgy"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="instagram" aria-label="Instagram Techgy"><i class="bi bi-instagram"></i></a>
+          </div>
+
+          <form class="search-form ms-4">
+            <input type="text" placeholder="Tìm kiếm bài viết..." class="form-control">
+            <button type="submit" class="btn" aria-label="Tìm kiếm"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="nav-wrap">
+      <div class="container d-flex justify-content-center position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Giới thiệu</a></li>
+            <li><a href="category.html">Chủ đề</a></li>
+            <li><a href="author-profile.html">Tác giả</a></li>
+            <li class="dropdown"><a href="#"><span>Trang khác</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="category.html">Chủ đề</a></li>
+                <li><a href="author-profile.html">Tác giả</a></li>
+                <li><a href="search-results.html">Kết quả tìm kiếm</a></li>
+                <li><a href="404.html">Trang 404 - Không tìm thấy</a></li>
+
+                <li class="dropdown"><a href="#"><span>Danh mục lồng nhau</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Kinh nghiệm lập trình</a></li>
+                    <li><a href="#">Hạ tầng &amp; DevOps</a></li>
+                    <li><a href="#">Sản phẩm &amp; Startup</a></li>
+                    <li><a href="#">Học tập &amp; nghề nghiệp</a></li>
+                    <li><a href="#">Cộng đồng &amp; chia sẻ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="breadcrumbs">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="bi bi-house"></i> Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Chủ đề</a></li>
+            <li class="breadcrumb-item active current">Chi tiết bài viết</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div class="title-wrapper">
+        <h1>Chi tiết bài viết</h1>
+        <p>Bài viết chuyên sâu về các chủ đề công nghệ, tập trung vào best practice, kiến trúc và trải nghiệm thực tế trong phát triển sản phẩm số.</p>
+      </div>
+    </div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container" data-aos="fade-up">
+
+              <article class="article">
+
+                <div class="hero-img" data-aos="zoom-in">
+                  <img src="assets/img/blog/blog-post-3.webp" alt="Hình ảnh bài viết nổi bật" class="img-fluid" loading="lazy">
+                  <div class="meta-overlay">
+                    <div class="meta-categories">
+                      <a href="#" class="category">Phát triển Web</a>
+                      <span class="divider">•</span>
+                      <span class="reading-time"><i class="bi bi-clock"></i> Đọc trong 6 phút</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="article-content" data-aos="fade-up" data-aos-delay="100">
+                  <div class="content-header">
+                    <h1 class="title">Phát triển Web hiện đại: Best Practices và xu hướng 2025</h1>
+
+                    <div class="author-info">
+                      <div class="author-details">
+                        <img src="assets/img/person/person-f-8.webp" alt="Author" class="author-img">
+                        <div class="info">
+                          <h4>Michael Chen</h4>
+                          <span class="role">Senior Web Developer</span>
+                        </div>
+                      </div>
+                      <div class="post-meta">
+                        <span class="date"><i class="bi bi-calendar3"></i> 15 Tháng 3, 2025</span>
+                        <span class="divider">•</span>
+                        <span class="comments"><i class="bi bi-chat-text"></i> 18 bình luận</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="content">
+                    <p class="lead">
+                      Bức tranh phát triển web liên tục thay đổi với tốc độ rất nhanh, kéo theo sự ra đời của nhiều công nghệ, framework và phương pháp mới định hình lại cách chúng ta xây dựng ứng dụng web hiện đại.
+                    </p>
+
+                    <p>
+                      Bước vào năm 2025, hệ sinh thái web đã chuyển mình mạnh mẽ, ưu tiên những cách tiếp cận giúp ứng dụng nhanh hơn, an toàn hơn và mang lại trải nghiệm hấp dẫn hơn cho người dùng. Bài viết này tổng hợp các xu hướng và best practice quan trọng mà lập trình viên web nên nắm vững.
+                    </p>
+
+                    <div class="content-image right-aligned">
+                      <img src="assets/img/blog/blog-hero-2.webp" class="img-fluid" alt="Công cụ phát triển web hiện đại" loading="lazy">
+                      <figcaption>Môi trường phát triển hiện đại chú trọng cộng tác và hiệu quả</figcaption>
+                    </div>
+
+                    <h2>Sự trỗi dậy của Web Components</h2>
+                    <p>
+                      Web Components ngày càng quan trọng trong phát triển web hiện đại, cung cấp một chuẩn chung để tạo ra các thành phần tùy biến có thể tái sử dụng. Một số lợi ích chính:
+                    </p>
+                    <ul>
+                      <li>Tăng khả năng tái sử dụng giữa các framework và dự án khác nhau</li>
+                      <li>Đóng gói tốt hơn về giao diện và logic</li>
+                      <li>Dễ bảo trì và mở rộng kiến trúc</li>
+                      <li>Không phụ thuộc vào một framework cụ thể</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                      <h3>Các xu hướng nổi bật năm 2025</h3>
+                      <ul class="trend-list">
+                        <li>
+                          <i class="bi bi-lightning-charge"></i>
+                          <span>Edge Computing và kiến trúc Serverless</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-shield-check"></i>
+                          <span>Tăng cường bảo mật ứng dụng</span>
+                        </li>
+                        <li>
+                          <i class="bi bi-phone"></i>
+                          <span>Progressive Web Apps (PWA)</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <h2>Tối ưu hiệu năng</h2>
+                    <p>
+                      Hiệu năng luôn là yếu tố then chốt trong phát triển web, với sự xuất hiện của các bộ chỉ số như Core Web Vitals và nhiều thước đo trải nghiệm người dùng khác. Ứng dụng hiện đại cần tối ưu cả về tốc độ lẫn mức tiêu thụ tài nguyên.
+                    </p>
+
+                    <blockquote>
+                      <p>
+                        "Tương lai của phát triển web không chỉ là viết code, mà là tạo ra những trải nghiệm mượt mà, dễ tiếp cận và có hiệu năng tốt cho mọi người, ở mọi nơi."
+                      </p>
+                      <cite>Emily Thompson, Kiến trúc sư hiệu năng web</cite>
+                    </blockquote>
+
+                    <div class="content-grid">
+                      <div class="row g-4">
+                        <div class="col-md-6">
+                          <div class="info-card">
+                            <i class="bi bi-speedometer2"></i>
+                            <h4>Chỉ số hiệu năng</h4>
+                            <p>Tập trung vào Core Web Vitals và các chỉ số trải nghiệm người dùng để cải thiện thứ hạng tìm kiếm và mức độ hài lòng của người dùng.</p>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="info-card">
+                            <i class="bi bi-universal-access"></i>
+                            <h4>Khả năng tiếp cận (Accessibility)</h4>
+                            <p>Áp dụng các khuyến nghị WCAG và đảm bảo ứng dụng có thể sử dụng tốt với mọi đối tượng người dùng trên nhiều thiết bị khác nhau.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2>Nhìn về tương lai</h2>
+                    <p>
+                      Trong những năm tới, thực hành phát triển web sẽ còn tiếp tục thay đổi, liên tục đón nhận công nghệ mới nhưng vẫn giữ vững nền tảng về hiệu năng, khả năng tiếp cận và trải nghiệm người dùng. Việc cập nhật xu hướng và best practice là chìa khóa để xây dựng những ứng dụng web hiện đại, dễ mở rộng và bền vững.
+                    </p>
+                  </div>
+
+                  <div class="meta-bottom">
+                    <div class="tags-section">
+                      <h4>Chủ đề liên quan</h4>
+                      <div class="tags">
+                        <a href="#" class="tag">Web Development</a>
+                        <a href="#" class="tag">Performance</a>
+                        <a href="#" class="tag">Best Practices</a>
+                        <a href="#" class="tag">Trends</a>
+                        <a href="#" class="tag">2025</a>
+                      </div>
+                    </div>
+
+                    <div class="share-section">
+                      <h4>Chia sẻ bài viết</h4>
+                      <div class="social-links">
+                        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="copy-link" title="Copy Link"><i class="bi bi-link-45deg"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+          <!-- Blog Author Section -->
+          <section id="blog-author" class="blog-author section">
+
+            <div class="container" data-aos="fade-up">
+              <div class="author-box">
+                <div class="row align-items-center">
+                  <div class="col-lg-3 col-md-4 text-center">
+                  <img src="assets/img/person/person-f-12.webp" class="author-img rounded-circle" alt="Ảnh tác giả" loading="lazy">
+
+                    <div class="author-social-links mt-3">
+                      <a href="https://twitter.com/#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                      <a href="https://linkedin.com/#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                      <a href="https://github.com/#" class="github"><i class="bi bi-github"></i></a>
+                      <a href="https://facebook.com/#" class="facebook"><i class="bi bi-facebook"></i></a>
+                      <a href="https://instagram.com/#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-9 col-md-8">
+                    <div class="author-content">
+                      <h3 class="author-name">Sarah Anderson</h3>
+                      <span class="author-title">Biên tập viên công nghệ &amp; Developer Advocate</span>
+
+                      <div class="author-bio mt-3">
+                        Đam mê tạo ra nội dung giúp rút ngắn khoảng cách giữa đội ngũ kỹ thuật và người dùng cuối, tập trung vào cách công nghệ mang lại giá trị thực tế cho sản phẩm.
+                      </div>
+
+                      <div class="author-website mt-3">
+                        <a href="#" class="website-link">
+                          <i class="bi bi-globe"></i>
+                          <span>sarahanderson.dev</span>
+                        </a>
+                        <a href="#" class="more-posts">
+                          Xem thêm bài viết từ Sarah <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section><!-- /Blog Author Section -->
+
+          <!-- Blog Comments Section -->
+          <section id="blog-comments" class="blog-comments section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="blog-comments-3">
+                <div class="section-header">
+                  <h3>Thảo luận <span class="comment-count">(8)</span></h3>
+                </div>
+
+                <div class="comments-wrapper">
+                  <!-- Comment 1 -->
+                  <article class="comment-card">
+                    <div class="comment-header">
+                      <div class="user-info">
+                        <img src="assets/img/person/person-f-9.webp" alt="User avatar" loading="lazy">
+                        <div class="meta">
+                      <h4 class="name">Sarah Williams</h4>
+                      <span class="date"><i class="bi bi-calendar3"></i> 13 Tháng 2, 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>Bài viết rất chi tiết và dễ hiểu. Mình đặc biệt thích phần nói về Core Web Vitals vì có thể áp dụng ngay vào dự án hiện tại.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="action-btn like-btn">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>12</span>
+                      </button>
+                      <button class="action-btn reply-btn">
+                        <i class="bi bi-reply"></i>
+                        <span>Trả lời</span>
+                      </button>
+                    </div>
+                  </article>
+
+                  <!-- Comment 2 with replies -->
+                  <article class="comment-card">
+                    <div class="comment-header">
+                      <div class="user-info">
+                        <img src="assets/img/person/person-m-9.webp" alt="User avatar" loading="lazy">
+                        <div class="meta">
+                      <h4 class="name">James Cooper</h4>
+                      <span class="date"><i class="bi bi-calendar3"></i> 13 Tháng 2, 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>Mình đang cân nhắc chuyển monolith sang microservices, bài viết đã cho mình thêm góc nhìn cân bằng hơn về chi phí và lợi ích.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="action-btn like-btn">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>8</span>
+                      </button>
+                      <button class="action-btn reply-btn">
+                        <i class="bi bi-reply"></i>
+                        <span>Trả lời</span>
+                      </button>
+                    </div>
+
+                    <!-- Reply Thread -->
+                    <div class="reply-thread">
+                      <!-- Reply 1 -->
+                      <article class="comment-card reply">
+                        <div class="comment-header">
+                          <div class="user-info">
+                            <img src="assets/img/person/person-f-9.webp" alt="User avatar" loading="lazy">
+                            <div class="meta">
+                              <h4 class="name">Emily Parker</h4>
+                              <span class="date"><i class="bi bi-calendar3"></i> 13 Tháng 2, 2025</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-content">
+                          <p>Đồng ý, team mình sau khi tối ưu bundle và lazy load đã cải thiện đáng kể điểm Lighthouse.</p>
+                        </div>
+                        <div class="comment-actions">
+                          <button class="action-btn like-btn">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>5</span>
+                          </button>
+                          <button class="action-btn reply-btn">
+                            <i class="bi bi-reply"></i>
+                            <span>Reply</span>
+                          </button>
+                        </div>
+                      </article>
+
+                      <!-- Reply 2 -->
+                      <article class="comment-card reply">
+                        <div class="comment-header">
+                          <div class="user-info">
+                            <img src="assets/img/person/person-f-7.webp" alt="User avatar" loading="lazy">
+                            <div class="meta">
+                              <h4 class="name">Daniel Brown</h4>
+                              <span class="date"><i class="bi bi-calendar3"></i> 13 Tháng 2, 2025</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment-content">
+                          <p>Mình cũng đang thử nghiệm serverless cho một số tác vụ backend nhỏ, chi phí khá tối ưu.</p>
+                        </div>
+                        <div class="comment-actions">
+                          <button class="action-btn like-btn">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>3</span>
+                          </button>
+                          <button class="action-btn reply-btn">
+                            <i class="bi bi-reply"></i>
+                            <span>Reply</span>
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  </article>
+
+                  <!-- Comment 3 -->
+                  <article class="comment-card">
+                    <div class="comment-header">
+                      <div class="user-info">
+                        <img src="assets/img/person/person-m-6.webp" alt="User avatar" loading="lazy">
+                        <div class="meta">
+                      <h4 class="name">Rachel Adams</h4>
+                      <span class="date"><i class="bi bi-calendar3"></i> 13 Tháng 2, 2025</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>Mình đánh giá cao phần nói về accessibility, đây là chủ đề thường bị bỏ qua khi xây dựng sản phẩm nội bộ.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="action-btn like-btn">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>6</span>
+                      </button>
+                      <button class="action-btn reply-btn">
+                        <i class="bi bi-reply"></i>
+                        <span>Reply</span>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+            </div>
+
+          </section><!-- /Blog Comments Section -->
+
+          <!-- Blog Comment Form Section -->
+          <section id="blog-comment-form" class="blog-comment-form section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <form method="post" role="form">
+
+                <div class="section-header">
+                  <h3>Chia sẻ ý kiến của bạn</h3>
+                  <p>Địa chỉ email của bạn sẽ không được công khai. Các trường bắt buộc được đánh dấu *</p>
+                </div>
+
+                <div class="row gy-3">
+                  <div class="col-md-6 form-group">
+                    <label for="name">Họ và tên *</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Nhập họ và tên của bạn" required="">
+                  </div>
+
+                  <div class="col-md-6 form-group">
+                    <label for="email">Địa chỉ email *</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Nhập địa chỉ email" required="">
+                  </div>
+
+                  <div class="col-12 form-group">
+                    <label for="website">Website</label>
+                    <input type="url" name="website" class="form-control" id="website" placeholder="Website của bạn (không bắt buộc)">
+                  </div>
+
+                  <div class="col-12 form-group">
+                    <label for="comment">Bình luận của bạn *</label>
+                    <textarea class="form-control" name="comment" id="comment" rows="5" placeholder="Chia sẻ suy nghĩ của bạn..." required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn-submit">Gửi bình luận</button>
+                  </div>
+                </div>
+
+              </form>
+
+            </div>
+
+          </section><!-- /Blog Comment Form Section -->
+
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Search Widget -->
+            <div class="search-widget widget-item">
+
+              <h3 class="widget-title">Tìm kiếm</h3>
+              <form action="">
+                <input type="text">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+              </form>
+
+            </div><!--/Search Widget -->
+
+            <!-- Categories Widget -->
+            <div class="categories-widget widget-item">
+
+              <h3 class="widget-title">Chủ đề</h3>
+              <ul class="mt-3">
+                <li><a href="#">General <span>(25)</span></a></li>
+                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                <li><a href="#">Travel <span>(5)</span></a></li>
+                <li><a href="#">Design <span>(22)</span></a></li>
+                <li><a href="#">Creative <span>(8)</span></a></li>
+                <li><a href="#">Educaion <span>(14)</span></a></li>
+              </ul>
+
+            </div><!--/Categories Widget -->
+
+            <!-- Categories Widget -->
+            <div class="categories-widget widget-item">
+
+              <h3 class="widget-title">Chủ đề</h3>
+              <ul class="mt-3">
+                <li><a href="#">General <span>(25)</span></a></li>
+                <li><a href="#">Lifestyle <span>(12)</span></a></li>
+                <li><a href="#">Travel <span>(5)</span></a></li>
+                <li><a href="#">Design <span>(22)</span></a></li>
+                <li><a href="#">Creative <span>(8)</span></a></li>
+                <li><a href="#">Educaion <span>(14)</span></a></li>
+              </ul>
+
+            </div><!--/Categories Widget -->
+
+            <!-- Recent Posts Widget -->
+            <div class="recent-posts-widget widget-item">
+
+              <h3 class="widget-title">Bài viết gần đây</h3>
+
+              <div class="post-item">
+                <img src="assets/img/blog/blog-post-square-1.webp" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="assets/img/blog/blog-post-square-2.webp" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="assets/img/blog/blog-post-square-3.webp" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="assets/img/blog/blog-post-square-4.webp" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+              </div><!-- End recent post item-->
+
+              <div class="post-item">
+                <img src="assets/img/blog/blog-post-square-5.webp" alt="" class="flex-shrink-0">
+                <div>
+                  <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+              </div><!-- End recent post item-->
+
+            </div><!--/Recent Posts Widget -->
+
+            <!-- Tags Widget -->
+            <div class="tags-widget widget-item">
+
+              <h3 class="widget-title">Tags</h3>
+              <ul>
+                <li><a href="#">App</a></li>
+                <li><a href="#">IT</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Office</a></li>
+                <li><a href="#">Creative</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Smart</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">Marketing</a></li>
+              </ul>
+
+            </div><!--/Tags Widget -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Techgy</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>2847 Rainbow Road</p>
+            <p>Ho Chi Minh City, Viet Nam</p>
+            <p class="mt-3"><strong>Điện thoại:</strong> <span>+84 000 000 000</span></p>
+            <p><strong>Email:</strong> <span>contact@techgy.vn</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Liên kết hữu ích</h4>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Dịch vụ</h4>
+          <ul>
+            <li><a href="#">Tư vấn kiến trúc hệ thống</a></li>
+            <li><a href="#">Phát triển ứng dụng web</a></li>
+            <li><a href="#">Tối ưu hiệu năng</a></li>
+            <li><a href="#">Đào tạo nội bộ</a></li>
+            <li><a href="#">Thiết kế trải nghiệm số</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Chủ đề nổi bật</h4>
+          <ul>
+            <li><a href="#">Lập trình &amp; kiến trúc</a></li>
+            <li><a href="#">Cloud &amp; DevOps</a></li>
+            <li><a href="#">Bảo mật</a></li>
+            <li><a href="#">Sự nghiệp công nghệ</a></li>
+            <li><a href="#">Câu chuyện sản phẩm</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Tài nguyên khác</h4>
+          <ul>
+            <li><a href="#">Hướng dẫn cho người mới</a></li>
+            <li><a href="#">Case study thực tế</a></li>
+            <li><a href="#">Tài liệu tham khảo</a></li>
+            <li><a href="#">Sự kiện &amp; workshop</a></li>
+            <li><a href="#">Cộng đồng Techgy</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Bản quyền</span> <strong class="px-1 sitename">Techgy</strong> <span>Đã đăng ký mọi quyền</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -347,7 +347,7 @@ h6 {
     padding: 0;
   }
 
-  .navmenu ul {
+  .navmenu > ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -379,6 +379,11 @@ h6 {
     line-height: 0;
     margin-left: 5px;
     transition: 0.3s;
+  }
+
+  .navmenu .nav-back-item,
+  .navmenu .nav-submenu-back {
+    display: none;
   }
 
   .navmenu li:last-child a {
@@ -451,40 +456,63 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    background-color: color-mix(in srgb, var(--default-color) 10%, white 15%);
+    background-color: var(--surface-color);
     color: var(--nav-color);
     font-size: 24px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
-    padding: 5px;
-    border-radius: 4px;
-    transition: color 0.2s;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
   }
 
   .mobile-nav-toggle:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent-color), transparent 60%);
+    transform: translateY(-2px);
+  }
+
+  .mobile-nav-toggle:active {
+    transform: translateY(0);
   }
 
   .navmenu {
     padding: 0;
     z-index: 9997;
+    transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .navmenu ul {
-    display: none;
+    display: block;
     list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    padding: 70px 0 20px 0;
     margin: 0;
-    border-radius: 6px;
+    border-radius: 0;
     background-color: var(--nav-mobile-background-color);
     overflow-y: auto;
-    transition: 0.3s;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease, visibility 0.4s;
     z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(15, 23, 42, 0.18);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    will-change: transform, opacity;
   }
 
   .navmenu a,
@@ -536,24 +564,28 @@ h6 {
   }
 
   .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    padding: 70px 0 20px 0;
+    margin: 0;
+    background-color: var(--nav-mobile-background-color);
+    box-shadow: 0 0 30px rgba(15, 23, 42, 0.18);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10002;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease, visibility 0.4s;
   }
 
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+  .navmenu .dropdown.submenu-open>ul {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .mobile-nav-active {
@@ -561,25 +593,111 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
+    color: var(--contrast-color);
+    position: fixed;
+    font-size: 28px;
+    top: 20px;
+    right: 20px;
     margin-right: 0;
-    z-index: 9999;
+    z-index: 10001;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
+    width: 48px;
+    height: 48px;
+    padding: 0;
+  }
+
+  /* Ẩn button X khi có submenu mở */
+  .mobile-nav-active.submenu-active .mobile-nav-toggle {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* Fallback với :has() selector */
+  .mobile-nav-active .navmenu:has(.dropdown.submenu-open) .mobile-nav-toggle {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+    transform: translateY(-2px) rotate(90deg);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
-    overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    background: rgba(15, 23, 42, 0.45);
+    transition: background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: auto;
   }
 
   .mobile-nav-active .navmenu>ul {
-    display: block;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Back button trong submenu */
+  .navmenu .nav-back-item {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  }
+
+  .navmenu .nav-submenu-back {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 16px 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--heading-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+  }
+
+  .navmenu .nav-submenu-back:hover {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+    color: var(--accent-color);
+  }
+
+  .navmenu .nav-submenu-back:active {
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu .nav-submenu-back i {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+  }
+
+  .navmenu .nav-submenu-back:hover i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: translateX(-2px);
+  }
+
+  .navmenu .nav-submenu-back span {
+    flex: 1;
   }
 }
 

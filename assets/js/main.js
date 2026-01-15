@@ -50,12 +50,40 @@
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
       e.preventDefault();
+      e.stopImmediatePropagation();
+
+      const dropdown = this.closest('.dropdown');
+
+      // Mobile: slide-in submenu
+      if (window.innerWidth < 1200) {
+        dropdown.classList.add('submenu-open');
+        document.body.classList.add('submenu-active');
+        return;
+      }
+
+      // Desktop: fallback to classic dropdown
       this.parentNode.classList.toggle('active');
       this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
+    });
+  });
+
+  // Mobile submenu back buttons
+  document.querySelectorAll('.navmenu .nav-submenu-back').forEach(backBtn => {
+    backBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const dropdown = this.closest('.dropdown.submenu-open');
+      if (dropdown) {
+        dropdown.classList.remove('submenu-open');
+        // Kiểm tra xem còn submenu nào mở không
+        const hasOpenSubmenu = document.querySelector('.navmenu .dropdown.submenu-open');
+        if (!hasOpenSubmenu) {
+          document.body.classList.remove('submenu-active');
+        }
+        dropdown.classList.remove('submenu-open');
+      }
     });
   });
 
